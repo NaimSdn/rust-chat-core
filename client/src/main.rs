@@ -9,7 +9,7 @@ fn main() {
         let mut user_input: String = String::new();
         match stdin().read_line(&mut user_input) {
             Ok(_n) => {
-                let trimmed_user_input: &str = user_input.trim_matches('\n').trim_matches('\r');
+                let trimmed_user_input: &str = user_input.trim_end();
                 let user_byte: &[u8] = trimmed_user_input.as_bytes();
                 request.write(user_byte).expect("Error on the write method !");
             }
