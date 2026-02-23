@@ -11,11 +11,11 @@ fn main() {
         is_running = true;
         println!("Connexion established with the server !");
         while is_running {
-            stdin().read_line(&mut user_menu_choice).expect("Error on the User menu choice ! ");
-            let trimmed_user_menu_choice: &str = user_menu_choice.trim_end();
             println!("What do you want to do ? (Requires a single number (1 or 2)");
             println!("1 - Send a message");
             println!("2 - Quit");
+            stdin().read_line(&mut user_menu_choice).expect("Error on the User menu choice ! ");
+            let trimmed_user_menu_choice: &str = user_menu_choice.trim_end();
             match trimmed_user_menu_choice {
                 "1" => {
                     println!("You can write your message : ");
